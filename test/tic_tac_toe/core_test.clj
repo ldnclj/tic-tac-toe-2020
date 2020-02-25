@@ -7,4 +7,8 @@
     (is (= (game) [[:- :- :-],[:- :- :-],[:- :- :-]])))
   (testing "tells you if someone won"
     (is (= (check [[:x :x :x],[:o :- :-],[:- :o :o]]) true))
+    (is (= (check [
+      [:- :x :x],
+      [:o :x :-],
+      [:- :x :o]]) true))
     ))

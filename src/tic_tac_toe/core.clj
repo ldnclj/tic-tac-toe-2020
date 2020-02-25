@@ -14,5 +14,10 @@
       false)))
 
 (defn check [board]
-    (true? (some true? (map full-row board)))
+    (or
+      (true? (some true? (map full-row board)))
+      (true? (some true? (map full-row (apply mapv vector board))))
+
+      ; diagnols
+    )
   )
