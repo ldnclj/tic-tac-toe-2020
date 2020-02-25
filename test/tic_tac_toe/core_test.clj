@@ -6,5 +6,5 @@
   (testing "creates an game state"
     (is (= (game) [[:- :- :-],[:- :- :-],[:- :- :-]])))
   (testing "tells you if someone won"
-    (is (= (check [[:x :x :x],[:o :- :-],[:- :o :o]]) :x))
-    )
+    (is (= (check [[:x :x :x],[:o :- :-],[:- :o :o]]) true))
+    ))

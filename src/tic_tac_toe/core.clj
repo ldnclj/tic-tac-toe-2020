@@ -3,7 +3,7 @@
 (defn game
   "creates empty game"
   []
-  (repeat 3 [(repeat 3 :-)]))
+  (repeat 3 (vec (repeat 3 :-))))
 
 (defn full-row [v]
   (let [x (set v)]
@@ -11,10 +11,8 @@
       (if
         (= 1 (count x)) true
         false)
-      false
-    )
-  )
+      false)))
 
 (defn check [board]
-  (any? (map full-row board))
+    (true? (some true? (map full-row board)))
   )
