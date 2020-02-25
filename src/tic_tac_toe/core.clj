@@ -17,7 +17,7 @@
     (or
       (true? (some true? (map full-row board)))
       (true? (some true? (map full-row (apply mapv vector board))))
-
-      ; diagnols
+      (full-row (map #(nth (second %) (first %)) (map-indexed vector board)))
+      (full-row (map #(nth (second %) (- 2 (first %))) (map-indexed vector board)))
     )
   )
